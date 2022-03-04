@@ -23,5 +23,29 @@ namespace ConsoleAppProject.App02
         public string[] MenuChoices = { METRIC, IMPERIAL };
 
         public void OutputUnits()
+        {
+            Console.WriteLine("Please choose between the following: ");
+            ConsoleHelper.OutputMenu(MenuChoices);
+        }
+        public string GetUnit()
+        {
+            SelectedUnit = Console.ReadLine().ToUpper();
+            return SelectedUnit;
+        }
+
+        public double GetWeight()
+        {
+            if (SelectedUnit == METRIC)
+            {
+                Console.WriteLine("Please enter the weight in KG:");
+            }
+            else
+            {
+                Console.WriteLine("Please enter the weight in Stone: ");
+                Console.WriteLine("Please enter the weight in Pounds: ");
+            }
+            weight = Convert.ToDouble(Console.ReadLine());
+            return weight;
+        }
     }
 }
