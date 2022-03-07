@@ -52,7 +52,7 @@ namespace ConsoleAppProject.App02
         {
             if (SelectedUnit == METRIC)
             {
-                Console.WriteLine("Please enter the height in CMs:");
+                Console.WriteLine("Please enter the height in CM:");
             }
             else
             {
@@ -61,6 +61,15 @@ namespace ConsoleAppProject.App02
             }
             height = Convert.ToDouble(Console.ReadLine());
             return height;
+        }
+
+        public void CalculateBMI()
+        {
+            if(SelectedUnit == METRIC)
+            {
+                bmiResult = (weight / height / height) * 10000;
+            }
+            bmiResult = Math.Floor(bmiResult);
         }
     }
 }
