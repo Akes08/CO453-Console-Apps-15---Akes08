@@ -71,5 +71,23 @@ namespace ConsoleAppProject.App02
             }
             bmiResult = Math.Floor(bmiResult);
         }
+
+        public string GetBMICategory()
+        {
+            if (bmiResult < 18.5)
+                return "Underweight";
+            else if (bmiResult <= 24.9)
+                return "Normal";
+            else if (bmiResult <= 29.9)
+                return "Overweight";
+            else if (bmiResult <= 34.9)
+                return "Obese";
+            return "Not Yet Determined...";
+        }
+
+        public void OutputResult()
+        {
+            Console.WriteLine(SelectedUnit + " " + bmiResult + " " + GetBMICategory());
+        }
     }
 }
