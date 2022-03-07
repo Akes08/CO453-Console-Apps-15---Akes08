@@ -47,5 +47,20 @@ namespace ConsoleAppProject.App02
             weight = Convert.ToDouble(Console.ReadLine());
             return weight;
         }
+
+        public double GetHeight()
+        {
+            if (SelectedUnit == METRIC)
+            {
+                Console.WriteLine("Please enter the height in CMs:");
+            }
+            else
+            {
+                Console.WriteLine("Please enter the height in Feet:");
+                Console.WriteLine("Please enter the height in Inches:");
+            }
+            height = Convert.ToDouble(Console.ReadLine());
+            return height;
+        }
     }
 }
