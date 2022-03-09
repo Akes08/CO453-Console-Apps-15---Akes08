@@ -329,13 +329,13 @@ namespace ConsoleAppProject.App01
                     else
                     {
                         isValid = true;
-                        Console.WriteLine(" Negative number invalid please try again.");
+                        Console.WriteLine(" Negative number invalid please try again ");
                     }
                 }
                 catch (Exception)
                 {
                     isValid = true;
-                    Console.WriteLine(" Invalid number please try again.");
+                    Console.WriteLine(" Invalid number please try again ");
                 }
 
             } while (isValid);
