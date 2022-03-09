@@ -10,6 +10,11 @@ namespace ConsoleAppProject.App01
     /// </author>
     public class DistanceConverter
     {
+        public void Run ()
+        {
+            DistanceConverter converter = new DistanceConverter();
+            converter.ConverterDistance();
+        }
         public const int FEET_IN_MILES = 5280;
 
         public const double METRES_IN_MILES = 1609.34;
