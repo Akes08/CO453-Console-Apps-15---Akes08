@@ -197,14 +197,19 @@ namespace ConsoleAppProject.App02
 
         /// <summary>
         /// <author>
-        /// out to display the users bmi 
+        /// output to display the users bmi and show bmi message
         /// Akes Ali
         /// </author>
         public void OutputBMI()
         {
             Console.WriteLine();
             Console.WriteLine($" Your BMI is {BMI}. " +
-                $"You are {Category} ");
+                $"You are {Category} " +
+                "\n If your are BAME it puts you at more risk of developing" +
+                "\n diabetes and other long term related conditions" +
+                "\n Adults with 23.0 have an increased risk" +
+                "\n Whereas" +
+                "\n Adults with 27.5 have a high risk");
         }
     }
 }
