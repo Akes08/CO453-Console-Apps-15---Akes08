@@ -1,6 +1,7 @@
 ﻿
     using ConsoleAppProject.App01;
     using ConsoleAppProject.App02;
+    using ConsoleAppProject.App03;
     using ConsoleAppProject.Helpers;
     using System;
 
@@ -33,13 +34,14 @@
                 {
                 " Distance Converter",
                 " BMI Calculator",
+                " Student Grades",
             };
 
                 Console.WriteLine(" Which Application would you like to use ?");
                 Console.WriteLine();
 
                 int choice = ConsoleHelper.SelectChoice(choices);
-                //if 1 run app 1 DistanceConverter if 2 run app 2 BMICalculator
+                //if 1 run app 1 DistanceConverter if 2 run app 2 BMICalculator etc
                 switch (choice)
                 {
                     case 1:
@@ -52,6 +54,10 @@
                         break;
                     default:
                         break;
+                    case 3:
+                        StudentGrades app03 = new StudentGrades();
+                        app03.Run();
+                    break;
                 }
             }
         }

@@ -39,7 +39,8 @@ namespace ConsoleAppProject.App03
             {
                 100, 70, 60, 20, 60, 12, 60, 40, 40, 40
             };
-            GradeProfile = new int[10];
+
+            GradeProfile = new int[5];
         }
 
         public void OutputMenuChoices()
@@ -92,23 +93,23 @@ namespace ConsoleAppProject.App03
         {
             if (mark >= 0 && mark < 39)
             {
-                return Grades.F;
+                return App03.Grades.F;
             }
             if (mark >= 40 && mark < 49)
             {
-                return Grades.D;
+                return App03.Grades.D;
             }
             if (mark >= 50 && mark < 59)
             {
-                return Grades.C;
+                return App03.Grades.C;
             }
             if (mark >= 60 && mark < 69)
             {
-                return Grades.B;
+                return App03.Grades.B;
             }
-            if (mark >= 70 && mark <= 100)
+            else 
             {
-                return Grades.A;
+                return App03.Grades.A;
             }
         }
 
@@ -167,7 +168,10 @@ namespace ConsoleAppProject.App03
         {
             for (int i = 0; i < TotalStudents; i++)
             {
-                Console.WriteLine($"{Students[i]} mark = {Marks[i]} grade = {Grades[i]}");
+                int mark = Marks[i];
+                Grades grade = MarkToGrade(mark);
+
+                Console.WriteLine($"{Students[i]} Mark = {Marks[i]} Grade = {grade}");
             }
         }
     }
