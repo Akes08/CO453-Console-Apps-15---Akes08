@@ -18,14 +18,14 @@ namespace ConsoleAppProject.App04
     ///  Akes Ali
     ///  version 31/03/2022
     ///</author> 
-    public class NewsFeed
+    public class NewsList
     {
         public List<Post> PostList { get; set; }
 
         ///<summary>
         /// Construct an empty news feed.
         ///</summary>
-        public NewsFeed()
+        public NewsList()
         {
             PostList = new List<Post>();
         }
