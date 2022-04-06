@@ -2,6 +2,7 @@
     using ConsoleAppProject.App01;
     using ConsoleAppProject.App02;
     using ConsoleAppProject.App03;
+    using ConsoleAppProject.App04;
     using ConsoleAppProject.Helpers;
     using System;
 
@@ -35,6 +36,7 @@
                 " Distance Converter",
                 " BMI Calculator",
                 " Student Grades",
+                " Social Network",
             };
 
                 Console.WriteLine(" Which Application would you like to use ?");
@@ -57,6 +59,10 @@
                     case 3:
                         StudentGrades app03 = new StudentGrades();
                         app03.Run();
+                        break;
+                    case 4:
+                        NewsApp SocialNetwork = new NewsApp();
+                        SocialNetwork.DisplayMenu();
                     break;
                 }
             }
